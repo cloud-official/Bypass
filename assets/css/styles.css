@@ -1,0 +1,645 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #;
+    --background-color: #;
+    --text-color: #;
+    --input-background: #;
+    --input-text: #;
+    --popup-background: #;
+    --popup-text: #;
+    --link-color: #;
+}
+
+.light-mode {
+    --primary-color: #;
+    --background-color: #;
+    --text-color: #;
+    --input-background: #;
+    --input-text: #;
+    --popup-background: #;
+    --popup-text: #;
+    --link-color: #;
+    --button-background: #;
+    --button-text: #;
+}
+
+/* Global Styles */
+body, header, footer, nav ul li a, .dark-mode-toggle, button {
+    transition: background-color s, color s;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: ;
+    padding: ;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: var(--text-color);
+    padding: rem rem;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: ;
+    position: relative;
+    z-index: ;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin-right: rem;
+}
+
+nav .logo img {
+    height: px;
+    width: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: ;
+    margin: ;
+    display: flex;
+    flex-grow: ;
+    flex-wrap: wrap;
+    gap: rem;
+}
+
+nav ul li {
+    margin-right: ;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    flex-grow: ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem;
+    width: ;
+    box-sizing: border-box;
+}
+
+.content {
+    text-align: center;
+    width: ;
+    max-width: ;
+    padding: rem;
+    box-sizing: border-box;
+}
+
+h {
+    font-size: rem;
+    font-weight: ;
+    padding-bottom: rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+/* Input Elements */
+.input-group {
+    width: ;
+    max-width: px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: px;
+}
+
+.input-group input {
+    width: ;
+    padding: px;
+    border-radius: px;
+    border: px solid #;
+    font-size: px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    background-color: var(--input-background);
+    color: var(--input-text);
+    border: px solid var(--primary-color);
+    padding: px;
+    font-size: px;
+    border-radius: px;
+}
+
+/* Buttons */
+.button-container {
+    padding-top: rem;
+    width: ;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    width: ;
+    padding: px;
+    border-radius: px;
+}
+
+button {
+    padding: rem rem;
+    font-size: rem;
+    background-color: var(--button-background, var(--primary-color));
+    color: var(--button-text, var(--text-color));
+    border: none;
+    border-radius: px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+button:disabled {
+    opacity: ;
+    cursor: not-allowed;
+    background-color: #;
+    color: #;
+}
+
+button:not(:disabled)#submitButton {
+    position: relative;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: rem;
+    cursor: pointer;
+    margin-left: auto;
+    padding: ;
+    width: auto;
+    max-width: none;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: ;
+    left: ;
+    transform: translate(-, -);
+    background-color: var(--popup-background);
+    color: var(--popup-text);
+    padding: px;
+    border-radius: px;
+    box-shadow: px px px rgba(, , , );
+    z-index: ;
+    max-width: ;
+    max-height: ;
+    width: px;
+    overflow-y: auto;
+}
+
+.popup-content {
+    margin-bottom: px;
+}
+
+.popup-buttons {
+    display: flex;
+    gap: px;
+    justify-content: center;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem;
+}
+
+.popup-header h {
+    font-size: em;
+    margin: ;
+    font-weight: bold;
+}
+
+.close-popup,
+.copy-content,
+.open-link {
+    margin-top: px;
+    padding: px px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: px;
+    cursor: pointer;
+    width: px;
+}
+
+.close-popup {
+    margin: ;
+    width: px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: ;
+    left: ;
+    width: ;
+    height: ;
+    background-color: rgba(, , , );
+    z-index: ;
+}
+
+/* Highlight Boxes */
+.highlights-container {
+    display: flex;
+    gap: px;
+    margin-top: px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight-box {
+    position: relative;
+    flex: ;
+    min-width: px;
+    max-width: px;
+    padding: px;
+    border-radius: px;
+    background: rgba(, , , );
+    border: px solid rgba(, , , );
+    transition: all s ease;
+    box-shadow: px px px rgba(, , , );
+    overflow: hidden;
+}
+
+.highlight-box.full-width {
+    flex: ;
+    max-width: px;
+    margin-top: px;
+    margin-bottom: px;
+}
+
+.highlight-box:hover {
+    transform: translateY(-px);
+    box-shadow: px px px rgba(, , , );
+    border-color: rgba(, , , );
+}
+
+.highlight-box h {
+    margin: ;
+    font-size: rem;
+    color: var(--text-color);
+}
+
+.highlight-box ul {
+    list-style: none;
+    padding: ;
+    margin: ;
+}
+
+.supported-websites {
+    position: relative;
+}
+
+/* Rainbow Animation */
+.supported-websites::after,
+.highlight-box::after,
+button:not(:disabled)#submitButton::after {
+    content: '';
+    position: absolute;
+    left: ;
+    bottom: ;
+    width: ;
+    height: px;
+    background: linear-gradient(
+        to right,
+        #, #, #, #,
+        #, #, #, #
+    );
+    background-size: % ;
+    animation: rainbow s linear infinite;
+}
+
+@keyframes rainbow {
+    % {
+        background-position: % ;
+    }
+    % {
+        background-position: % ;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: rem;
+}
+
+/* Mobile Menu */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: rem;
+    cursor: pointer;
+    padding: rem;
+    margin: ;
+    width: auto;
+}
+
+/* Media Queries */
+@media screen and (max-width: px) {
+    .highlight-box.full-width {
+        flex: ;
+        max-width: ;
+    }
+}
+
+@media screen and (max-width: px) {
+    nav {
+        padding: rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: ;
+        left: ;
+        width: ;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        padding-bottom: rem;
+        gap: rem;
+        box-shadow: px px px rgba(, , , );
+    }
+
+    nav ul.show {
+        padding-top: rem;
+        display: flex;
+    }
+
+    nav ul li {
+        width: ;
+        text-align: center;
+    }
+
+    .dark-mode-toggle {
+        position: absolute;
+        right: rem;
+        top: ;
+        transform: translateY(-);
+    }
+
+    .api-key-button {
+        position: absolute;
+        right: rem;
+        top: ;
+        transform: translateY(-);
+        padding: rem;
+    }
+
+    nav .logo {
+        position: absolute;
+        left: ;
+        top: ;
+        transform: translate(-, -);
+    }
+}
+
+/* Icons */
+.email-icon,
+.discord-icon,
+.external-link-icon {
+    vertical-align: middle;
+    margin-right: px;
+}
+
+.external-arrow {
+    margin-left: px;
+}
+
+/* Supported Sites Container */
+.supported-sites-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(px, fr));
+    gap: rem;
+    padding: rem;
+}
+
+.supported-sites-list {
+    background: rgba(, , , );
+    border-radius: px;
+    padding: rem;
+}
+
+.supported-sites-list h {
+    color: var(--accent-color);
+    margin-bottom: rem;
+    font-size: rem;
+}
+
+.supported-sites-list ul {
+    list-style: none;
+    padding: ;
+    margin: ;
+}
+
+.supported-sites-list li {
+    padding: rem;
+    border-bottom: px solid rgba(, , , );
+}
+
+.supported-sites-list li:last-child {
+    border-bottom: none;
+}
+
+/* Stats Box */
+.stats-box {
+    grid-column: ;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: rem;
+    background: rgba(, , , );
+    border-radius: px;
+    padding: rem;
+    margin-top: rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: rem;
+}
+
+.stat-label {
+    font-size: rem;
+    opacity: ;
+}
+
+/* Responsive adjustments */
+@media (max-width: px) {
+    .supported-sites-container {
+        grid-template-columns: fr;
+        gap: rem;
+        padding: rem;
+    }
+
+    .stats-box {
+        padding: rem;
+    }
+
+    .stat-number {
+        font-size: rem;
+    }
+}
+
+body.userscript {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: vh; margin: ;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.userscript a {
+    color: var(--text-color);
+}
+
+/* API Key Button */
+.api-key-button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: rem;
+    cursor: pointer;
+    margin-left: auto;
+    padding: ;
+    width: auto;
+    max-width: none;
+}
+
+.api-key-button:hover {
+    opacity: ;
+}
+
+/* Key Popup Specific Styles */
+.popup-body {
+    display: flex;
+    flex-direction: column;
+    gap: rem;
+    padding: rem;
+    width: ;
+    box-sizing: border-box;
+}
+
+.popup-body input {
+    background-color: var(--input-background);
+    color: var(--input-text);
+    border: px solid var(--primary-color);
+    padding: px;
+    font-size: px;
+    border-radius: px;
+    width: ;
+    box-sizing: border-box;
+}
+
+.key-buttons {
+    display: flex;
+    gap: rem;
+    justify-content: center;
+    margin-top: rem;
+}
+
+.key-buttons button {
+    padding: px px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: px;
+    cursor: pointer;
+    width: px;
+}
+
+.key-status {
+    padding-top: px;
+    margin: ;
+    font-size: rem;
+    opacity: ;
+    text-align: center;
+}
+
+.key-status.success {
+    color: #;
+}
+
+.key-status.error {
+    color: #;
+}
+
+#keyPopup {
+    width: px;
+}
+
+.refresh-toggle {
+    margin-top: px;
+    display: flex;
+    align-items: center;
+    width: ;
+}
+
+.refresh-toggle label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.refresh-toggle input[type="checkbox"] {
+    cursor: pointer;
+    margin-right: px;
+}
